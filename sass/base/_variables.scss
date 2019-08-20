@@ -1,0 +1,75 @@
+// Variables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Breakpoints
+// Example Usage: @media($bp-smaller-than-tablet) { ... }
+$bp-larger-than-mobile    : "min-width: 480px" !default;
+$bp-larger-than-phablet   : "min-width: 550px" !default;
+$bp-larger-than-tablet    : "min-width: 750px" !default;
+$bp-larger-than-desktop   : "min-width: 1000px" !default;
+$bp-larger-than-desktophd : "min-width: 1200px" !default;
+
+$bp-smaller-than-desktop : "max-width: 1060px" !default;
+$bp-smaller-than-desktophd : "max-width: 1200px" !default;
+$bp-smaller-than-tablet : "max-width: 750px" !default;
+$bp-smaller-than-mobile : "max-width: 480px" !default;
+$bp-smaller-than-phablet   : "max-width: 550px" !default;
+
+// Colors
+$red: #a42126 !default;
+$white: #FFFFFF !default;
+$black: #000000 !default;
+
+//Site specific colors:
+$blue: #004756;
+$orange: #FDB235;
+$green: #709779;
+$brown: #9F8365;
+$dark: #242025;
+$creme: #E8E0D9;
+
+//Fonts
+$proxima: "proxima-nova",sans-serif;
+
+@font-face {
+	font-family: "cirka-light";
+	src: url("fonts/Cirka-Light.eot") format("eot"),
+		 url("fonts/Cirka-Light.woff2") format("woff2"),
+		 url("fonts/Cirka-Light.woff") format("woff"),
+		 url("fonts/Cirka-Light.otf") format("otf"),
+}
+
+@font-face {
+	font-family: "cirka-bold";
+	src: url("fonts/Cirka-Bold.eot") format("eot"),
+		 url("fonts/Cirka-Bold.woff2") format("woff2"),
+		 url("fonts/Cirka-Bold.woff") format("woff"),
+		 url("fonts/Cirka-Bold.otf") format("otf"),
+}
+
+
+@mixin cirka-light{
+	font-family: "cirka-light", sans-serif;
+}
+@mixin cirka-bold{
+	font-family: "cirka-bold", sans-serif;
+}
+
+@mixin work_sans{
+	font-family: 'Work Sans', sans-serif;
+}
+
+// p{
+// 	@include cirka-light;
+// }
+
+// sub{
+// 	@include cirka-bold;
+// }
+
+// h1{
+// 	@include work_sans;
+// }
+
+// Misc
+//$global-radius: 4px !default;

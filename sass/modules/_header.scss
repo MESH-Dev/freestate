@@ -1,0 +1,338 @@
+.header-top{
+	height:33px;
+	display:none;
+	background-image:url('img/ss_treetrunk.png'), url('img/ss_grass.png');
+	background-repeat:no-repeat, repeat-x;
+	background-size:76px, 179px; //135px
+	background-position:bottom center, bottom left;
+	@media($bp-smaller-than-desktop){
+		// height:64px;
+		// background-size:66px, 300px;
+	}
+}
+
+header{
+	background-color:$blue;
+	//height:100px;
+	padding:1.5rem 0 .5rem 0;
+	position:relative;
+	background-size:100px 50px;
+
+	background-image:url('img/SS_Homecomers_Roots_texture.png');
+	background-position:bottom;
+
+	@media ($bp-smaller-than-tablet){
+		padding:1.5rem 0 1.5rem 0;
+	}
+	
+	h1{
+		padding:0;
+		margin:0;
+		line-height:0;
+	}
+	
+	.close{
+			display:none;
+			font-size:1.7em;
+			cursor:pointer;
+		} 
+	.menu-trigger{
+		
+		position:absolute;
+		top:1.7rem;
+		z-index:100;
+		cursor:pointer;
+		color:$green;
+
+			&:active,
+			&:focus,
+			&:hover{
+				color:$orange;
+			}
+
+		svg{
+			fill:$green;
+			font-size:1.7em;
+			height:1.7em;
+			width:1.7em;
+		}
+
+		i{
+			color:$green;
+			font-size:2.7em;
+			
+		}
+
+		
+	}
+
+
+	.logo{
+		text-align:center;
+		.site-title{
+			img{
+			max-width:299px;
+			//padding-left:15px;
+
+			@media ($bp-smaller-than-tablet){
+				padding-left:0;
+				max-width:150px;
+			}
+			}
+		}
+
+		&:hover,
+		&:focus,
+		&:active{
+			opacity:.7;
+		}
+		
+	}
+
+	.main-navigation{
+		@media ($bp-smaller-than-tablet){
+			display:none;
+		}
+
+		
+		ul{
+			padding:2.5rem 0 0 0;
+			margin:0;
+			li{
+				
+				//margin-right:4em;
+				list-style-type:none;
+				position:relative;
+				margin:0 4rem 0 0;
+				display:inline-block;
+
+				@media ($bp-smaller-than-desktop){
+					margin:0 1rem 0 0;
+			}
+				a{
+					color:$green;
+					@include cirka-bold;
+					font-size:2.2em;
+					letter-spacing:.08px;
+					line-height:1;
+					@media ($bp-smaller-than-tablet){
+					font-size:1.8em;
+			}
+
+					&:hover,
+					&:focus,
+					&:active{
+						color:$orange;
+						text-decoration:none;
+					}
+				}
+
+				
+				&.current_page_parent{
+					> a{
+						color:$orange;
+						text-decoration:none;
+					}
+				}
+
+				&:hover,
+				&:active,
+				&:focus{
+					.sub-menu{
+						left:-1.5rem;	
+						}
+					}
+				}
+			}
+		}
+
+		ul.sub-menu{
+			position:absolute;
+			left:-99999999px;
+			//background-color:$blue;
+			padding:1.5rem;
+			width:25rem;
+			z-index:100;
+			background-size:100px 50px;
+
+	background-image:url('img/SS_Homecomers_Roots_texture.png');
+	background-position:bottom;
+			li{
+				display:block;
+				margin-bottom:1.5rem;
+				line-height:1.2;
+				&.current_page_item{
+					a{
+						color:$orange;
+						text-decoration:none;
+					}
+				}
+				&:last-child{
+					margin-bottom:0;
+				}
+				a{
+					color:$white;
+					text-transform:uppercase;
+					@include work-sans;
+					font-weight:700;
+					padding-bottom:1.5rem;
+					letter-spacing:3px;
+					font-size:1.6em;
+					&:hover,
+					&:focus,
+					&:active{
+						text-decoration:none;
+						color:$orange;
+					}
+				}
+			}
+		}
+	
+	.social-list{
+		text-align:right;
+	}
+	.social{
+		padding-top:2.2rem;
+
+		@media ($bp-smaller-than-tablet){
+			display:none;
+		}
+		li{
+			display:inline-block;
+			margin-left:1rem;
+			padding-top:1rem;
+			list-style-type:none;
+			a{
+				color:$white;
+
+				&:hover,
+				&:focus,
+				&:active{
+					color:$brown;
+				}
+			}
+		}
+	}
+}
+
+.sidr{
+	
+	padding:1em;
+	background-size:100px 50px;
+        background-image:url('img/SS_Homecomers_Roots_texture.png');
+        background-position:bottom;
+
+	.close{
+		color:$green;
+		position:absolute;
+		right:0;
+		top:1em;
+		right:.5em;
+		cursor:pointer;
+		&:active,
+		&:focus,
+		&:hover{
+			color:$orange;
+		}
+	}
+
+	ul{
+		padding:2.8rem 0 0 0;
+		margin:0;
+		li{
+			
+			//margin-right:4em;
+			list-style-type:none;
+			position:relative;
+			margin:0 0 1em 0;
+			//display:inline-block;
+
+			a{
+				color:$green;
+				@include cirka-bold;
+				font-size:2.2em;
+				letter-spacing:.08px;
+				line-height:1;
+
+				&:hover,
+				&:focus,
+				&:active{
+					color:$orange;
+					text-decoration:none;
+				}
+			}
+
+				
+			&.current_page_parent{
+				> a{
+					color:$orange;
+					text-decoration:none;
+				}
+			}
+
+				&:hover,
+				&:active,
+				&:focus{
+					.sub-menu{
+						left:0;	
+						}
+					}
+				}
+			}
+	
+	ul.sub-menu{
+			padding:1.5rem;
+			margin-left:1em;
+			width:25rem;
+			z-index:100;
+			li{
+				display:block;
+				margin-bottom:1.5rem;
+				line-height:1.2;
+				&.current_page_item{
+					a{
+						color:$orange;
+						text-decoration:none;
+					}
+				}
+				&:last-child{
+					margin-bottom:0;
+				}
+				a{
+					color:$white;
+					text-transform:uppercase;
+					@include work-sans;
+					font-weight:700;
+					padding-bottom:1.5rem;
+					letter-spacing:3px;
+					font-size:1.6rem;
+					&:hover,
+					&:focus,
+					&:active{
+						text-decoration:none;
+						color:$orange;
+					}
+				}
+			}
+		}
+
+	.social{
+		padding-top:2.8rem;
+		li{
+			display:inline-block;
+			margin:0 1rem 0 0;
+			padding-top:1rem;
+			list-style-type:none;
+			a{
+				color:$white;
+				font-size:1em;
+
+				&:hover,
+				&:focus,
+				&:active{
+					color:$brown;
+				}
+			}
+		}
+	}
+}
